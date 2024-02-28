@@ -1,0 +1,92 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Mymaster.master.cs" Inherits="CARXPRESSPROJECT.Mymaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>
+        MY carxpress project
+    </title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        nav{
+            background-color:cornflowerblue;
+            padding:50px;
+        }
+        ul{
+            list-style:none;
+        }
+            ul li {
+               background-color:blue;
+                text-align: center;
+                line-height: 35px;
+                float: left;
+                width: 220px;
+                position: relative;
+                font-size: initial;
+                border-radius:10px;
+            }
+            ul li a{
+                text-decoration:none;
+                display:block;
+                color:white;
+
+            }
+            ul li a:hover{
+                color:blue;
+                border-radius:10px;
+                background-color:white;
+            }
+            ul ul{
+                display:none;
+                position:absolute;
+            }
+            ul li:hover>ul{
+                display:block;
+                border-radius:10px;
+
+            }
+            body{
+                background-image:url(images/car.jpg);
+                background-size:cover;
+                background-attachment:fixed;
+            }
+
+        
+    </style>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <nav>
+            <ul>
+                <li><a href="#">CAR</a>
+                    <ul>
+                        <li><a href="#">Add car</a></li>
+                        <li><a href="#">carlist</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Booking</a></li>
+                <li><a href="#">Customer</a></li>
+                <li><a href="#">Repair</a></li>
+                    <li><a href="#">About us</a></li>
+                <li><a href="#">login</a></li>
+
+                
+            </ul>
+        </nav>
+        
+    </form>
+</body>
+</html>
+
+
+<div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
